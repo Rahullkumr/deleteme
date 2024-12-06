@@ -1,0 +1,180 @@
+
+
+SET 1.A)
+sudo docker pull hello-world  #pull docker image
+sudo docker images hello-world  #Display images
+sudo docker run hello-world  #Run container from image
+
+1.B)
+sudo docker pull debian  #pull debian image
+sudo docker image ls debian  #display image details
+sudo docker run -it debian  #run container from image
+
+1.C)
+sudo docker pull redhat/ubi8  #pull redhat image
+sudo docker image ls redhat/ubi8  #display image details
+sudo docker run -it redhat/ubi8  #run container from image
+
+1.D)
+mkdir alpine-image  #make directory
+cd alpine-image/  
+
+sudo apt install vim -y  //install vim
+
+vim Dockerfile  #create dockerfile
+	FROM alpine:latest
+	CMD ["echo", "hello world"]
+
+sudo docker build -t my-custom-image .  #Build docker image with tag my-custom-image
+sudo docker run -it my-custom-image    #Run container from custom image
+cd ..
+
+SET 2.A)
+mkdir ubuntu  #make directory
+cd ubuntu/
+
+vim Dockerfile  #create dockerfile
+
+	FROM ubuntu
+	CMD ["/bin/bash"]
+
+sudo docker build -t ubuntu-bash .  #build docker image
+sudo docker run -it ubuntu-bash  #run container using built image
+
+	exit
+
+cd ..
+
+2.B)
+
+mkdir myubuntu  #make directory
+cd myubuntu/  
+
+vim Dockerfile  #create dockerfile
+	FROM alpine:latest
+
+	RUN apk add --no-cache bash
+
+	CMD ["/bin/bash"]
+
+sudo docker build -t alpine-openjdk8 .  #build docker images
+sudo docker run -it alpine-openjdk8    #run container using built images
+
+2.C)
+
+sudo docker ps -a
+
+sudo docker start [container_id]
+
+sudo docker ps -a
+
+sudo docker exec -it [container_name] bin/bash
+
+
+SET 3.A)
+mkdir pythondocker
+
+cd pythondocker/
+vim Dockerfile
+
+	FROM python:3.8
+
+	WORKDIR /app
+
+	COPY . /app
+
+	CMD ["python", "script.py"]
+
+vim script.py
+	print("hello")
+
+
+ls
+
+sudo docker build -t pyimage .
+sudo docker images
+sudo docker run --name pycontainer -it pyimage
+
+3.B)
+mkdir java-ubuntu
+cd java-ubuntu/
+
+vim Dockerfile
+
+# Use the official Ubuntu as the base image
+FROM ubuntu:latest
+
+# Update package list and install OpenJDK 8
+RUN apt-get update && \
+    apt-get install -y openjdk-8-jdk
+
+CMD ["java", "-version"]
+
+
+sudo docker build -t java-ubuntu-image .
+sudo docker run --name java-v-container -it java-ubuntu-image
+
+3.C)
+sudo docker login -u kadambari21
+sudo docker images
+sudo docker tag pyimage kadambari21/pyimage:latest
+sudo docker push kadambari21/pyimage:latest
+sudo docker images
+cd ..
+
+SET 4.
+mkdir set4/
+cd set4/
+
+vim Dockerfile
+	
+	FROM tomcat:9-jdk11
+
+
+	RUN rm -rf /usr/local/tomcat/webapps/ROOT
+
+
+	COPY webapps/ROOT /usr/local/tomcat/webapps/ROOT
+
+
+	EXPOSE 8080
+
+
+	CMD ["cata:lina.sh", "run"]
+	
+mkdir webapps
+cd webapps/
+
+mkdir ROOT
+cd ROOT/
+
+vim index.jsp
+
+	<html>
+  		<body>
+    			<h1>Hello World</h1>
+  		</body>
+	</html>
+
+cd ..
+cd ..
+
+edit security group
+add inbound rule
+	HTTP IPv4
+	custom 8080
+save	
+
+
+ls
+sudo docker build -t javawebapp .
+sudo docker images
+sudo docker run --name javawebapp-container -d -p 8080:8080 javawebapp
+
+go to instance 
+public ip + 8080
+
+sudo docker ps
+sudo docker stop 1afe
+
+
