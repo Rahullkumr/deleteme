@@ -1,0 +1,41 @@
+
+
+1. Write a NumPy program to get the numpy version and show numpy build Configuration.
+
+2. Write a NumPy program to get help on the add function.
+
+3. Write a NumPy program to test whether none of the elements of a given array is zero.
+
+4. Write a NumPy program to test a given array element-wise for finiteness (not infinity or not a Number). Sample data: [1,0, np.nan, np.inf
+
+5. Write a NumPy program to create an element-wise comparison (greater, greater_equal, less and less_equal) of two given arrays.
+
+6. Write a NumPy program to create an array with the values 1, 7, 13. 105 and determine the size of the memory occupied by the array.
+
+7. Write a NumPy program to create an array of all the even integers from 30 to 70.
+
+8. Write a NumPy program to create a 3x3 identity matrix.
+
+9. Write a NumPy program to generate a random number between 0 and 1.
+
+10. Write a NumPy program to generate an array of 15 random numbers from a standard normal distribution.
+
+11. Write a NumPy program to create a vector with values ranging from 15 to 55 and print all values except the first and last
+
+12. Write a NumPy program to create a 3X4 array using and iterate over it.
+
+13. Write a NumPy program to create a vector of length 5 filled with arbitrary integers from 0 to 10.
+
+14. Write a Pandas program to convert a NumPy array to a Pandas series. Sample NumPy array: d1 = [10, 20, 30, 40, 50).
+
+15. Write a Pandas program to get the day of month, day of year, week number and day of week from a given series of date strings.
+
+16. Write a Pandas program convert the first and last character of each word to uppercase in each word of a given series.
+
+17. Write a Pandas program to compute the minimum, 25th percentile, median, 75th, and maximum of a given series
+
+18. Write a Pandas program to create the mean and standard deviation of the data of a given Series. Sample data (data = [1,2,3,4,5,6,7,8,9,5.31)
+
+19. Write a Pandas program to compute the Euclidean distance between two given series Euclidean distance.
+
+20. Write a Pandas program to create a TimeSeries to display all the Sundays of given year
