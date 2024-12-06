@@ -1,0 +1,331 @@
+Ass1
+
+#3==>sudo apt update
+
+=>sudo apt upgrade -y
+=>sudo apt install openjdk-21-jdk -y
+=>sudo dnf install java-21-amazon-corretto -y
+
+#4
+ Ass1/
+[ec2-user@ip-172-31-46-119 Ass1]$ =>vi findCity.py
+
+                                  => vi city.txt
+                                  => python3 findCity.py
+**Enter city name to search: pune
+pune found in list.
+[ec2-user@ip-172-31-46-119 Ass1]$ python3 findCity.py
+Enter city name to search: asdfghj
+asdfghj not found.
+
+
+
+Ass2
+**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            width: 300px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .gender-label {
+            display: inline;
+            margin-right: 10px;
+        }
+        .submit-btn {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Personal Details</h2>
+        <form action="#" method="POST">
+            <label for="salutation">Salutation:</label>
+            <select id="salutation" name="salutation">
+                <option value="" selected>--None--</option>
+                <option value="mr">Mr.</option>
+                <option value="ms">Ms.</option>
+                <option value="mrs">Mrs.</option>
+            </select>
+
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first_name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last_name" required>
+
+            <label>Gender:</label>
+            <label class="gender-label">
+                <input type="radio" name="gender" value="male"> Male
+            </label>
+            <label class="gender-label">
+                <input type="radio" name="gender" value="female"> Female
+            </label>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3"></textarea>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+**
+
+Ass3
+
+=====>=(1)==> lsblk
+     ====(2)=> sudo file -s /dev/xvdd/dev/xvdd: data
+      ===(3)===> sudo mkfs -t xfs /dev/xvdd meta-data=/dev/xvdd 
+ ========(4)==>sudo file -s /dev/xvdd/dev/xvdd: SGI XFS filesystem data (blksz 4096, inosz 512, v2 dirs)
+=(5)===> lsblk
+========(6)===> sudo mkdir /data
+========(7)==> sudo mount /dev/xvdd /data
+==(8)==> lsblk
+========(9)===>sudo umount /data
+==(10)==>lsblk
+
+
+****
+
+
+=>ubuntu@ip-172-31-39-145:~$=(1)==> lsblk
+NAME     MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+loop0      7:0    0 55.7M  1 loop /snap/core18/2829
+loop1      7:1    0 38.8M  1 loop /snap/snapd/21759
+loop2      7:2    0 25.2M  1 loop /snap/amazon-ssm-agent/7993
+xvda     202:0    0   11G  0 disk
+├─xvda1  202:1    0   10G  0 part /
+├─xvda14 202:14   0    4M  0 part
+├─xvda15 202:15   0  106M  0 part /boot/efi
+└─xvda16 259:0    0  913M  0 part /boot
+xvdd     202:48   0   10G  0 disk
+ubuntu@ip-172-31-39-145:~$==(2)=> sudo file -s /dev/xvdd/dev/xvdd: data
+ubuntu@ip-172-31-39-145:~$=(3)===> sudo mkfs -t xfs /dev/xvdd meta-data=/dev/xvdd       
+
+
+       isize=512    agcount=4, agsize=655360 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=1
+         =                       reflink=1    bigtime=1 inobtcount=1 nrext64=0
+data     =                       bsize=4096   blocks=2621440, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=16384, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+ubuntu@ip-172-31-39-145:~$
+ubuntu@ip-172-31-39-145:~$ ===(4)==>sudo file -s /dev/xvdd/dev/xvdd: SGI XFS filesystem data (blksz 4096, inosz 512, v2 dirs)
+ubuntu@ip-172-31-39-145:~$
+ubuntu@ip-172-31-39-145:~$=(5)===> lsblk
+NAME     MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+loop0      7:0    0 55.7M  1 loop /snap/core18/2829
+loop1      7:1    0 38.8M  1 loop /snap/snapd/21759
+loop2      7:2    0 25.2M  1 loop /snap/amazon-ssm-agent/7993
+xvda     202:0    0   11G  0 disk
+├─xvda1  202:1    0   10G  0 part /
+├─xvda14 202:14   0    4M  0 part
+├─xvda15 202:15   0  106M  0 part /boot/efi
+└─xvda16 259:0    0  913M  0 part /boot
+xvdd     202:48   0   10G  0 disk
+ubuntu@ip-172-31-39-145:~$==(6)===> sudo mkdir /data
+ubuntu@ip-172-31-39-145:~$==(7)==> sudo mount /dev/xvdd /data
+ubuntu@ip-172-31-39-145:~$=(8)==> lsblk
+NAME     MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+loop0      7:0    0 55.7M  1 loop /snap/core18/2829
+loop1      7:1    0 38.8M  1 loop /snap/snapd/21759
+loop2      7:2    0 25.2M  1 loop /snap/amazon-ssm-agent/7993
+xvda     202:0    0   11G  0 disk
+├─xvda1  202:1    0   10G  0 part /
+├─xvda14 202:14   0    4M  0 part
+├─xvda15 202:15   0  106M  0 part /boot/efi
+└─xvda16 259:0    0  913M  0 part /boot
+xvdd     202:48   0   10G  0 disk /data
+
+ubuntu@ip-172-31-39-145:~$ ==(9)===>sudo umount /data
+ubuntu@ip-172-31-39-145:~$ ==(10)==>lsblk
+NAME     MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+loop0      7:0    0 55.7M  1 loop /snap/core18/2829
+loop1      7:1    0 38.8M  1 loop /snap/snapd/21759
+loop2      7:2    0 25.2M  1 loop /snap/amazon-ssm-agent/7993
+xvda     202:0    0   11G  0 disk
+├─xvda1  202:1    0   10G  0 part /
+├─xvda14 202:14   0    4M  0 part
+├─xvda15 202:15   0  106M  0 part /boot/efi
+└─xvda16 259:0    0  913M  0 part /boot
+xvdd     202:48   0   10G  0 disk
+
+
+Ass4
+
+
+Ass6
+import json
+
+def binary_search(arr, target):
+    """Perform binary search on a sorted array."""
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid  # Element found
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1  # Element not found
+
+def lambda_handler(event, context):
+    """
+    Lambda function entry point.
+    Expects `arr` (sorted array) and `target` in the event payload.
+    """
+    try:
+        arr = event['arr']
+        target = event['target']
+        
+        # Validate input
+        if not isinstance(arr, list) or not isinstance(target, (int, float, str)):
+            return {
+                "statusCode": 400,
+                "body": json.dumps("Invalid input. Ensure 'arr' is a list and 'target' is a valid type.")
+            }
+        
+        # Perform binary search
+        index = binary_search(arr, target)
+        
+        if index != -1:
+            message = f"Element found at index {index}."
+        else:
+            message = "Element not found."
+        
+        return {
+            "statusCode": 200,
+            "body": json.dumps(message)
+        }
+    except KeyError as e:
+        return {
+            "statusCode": 400,
+            "body": json.dumps(f"Missing parameter: {str(e)}")
+        }
+    except Exception as e:
+        return {
+            "statusCode": 500,
+            "body": json.dumps(f"Internal server error: {str(e)}")
+        }
+
+**
+{
+  "arr": [1, 3, 5, 7, 9, 11],
+  "target": 7
+}
+**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

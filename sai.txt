@@ -1,0 +1,238 @@
+ ls
+[ec2-user@ip-172-31-46-119 ~]$ sudo dnf update -y
+Last metadata expiration check: 23:18:27 ago on Wed Aug 28 07:57:18 2024.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[ec2-user@ip-172-31-46-119 ~]$ sudo dnf install java-21-jdk -y
+Last metadata expiration check: 23:19:33 ago on Wed Aug 28 07:57:18 2024.
+No match for argument: java-21-jdk
+Error: Unable to find a match: java-21-jdk
+[ec2-user@ip-172-31-46-119 ~]$ sudo dnf install java-21-amazon-corretto -y
+Last metadata expiration check: 23:20:01 ago on Wed Aug 28 07:57:18 2024.
+Dependencies resolved.
+========================================================================================================================
+ Package                                   Architecture    Version                           Repository            Size
+========================================================================================================================
+Installing:
+ java-21-amazon-corretto                   x86_64          1:21.0.4+7-1.amzn2023.1           amazonlinux          213 k
+Installing dependencies:
+ alsa-lib                                  x86_64          1.2.7.2-1.amzn2023.0.2            amazonlinux          504 k
+ cairo                                     x86_64          1.17.6-2.amzn2023.0.1             amazonlinux          684 k
+ dejavu-sans-fonts                         noarch          2.37-16.amzn2023.0.2              amazonlinux          1.3 M
+ dejavu-sans-mono-fonts                    noarch          2.37-16.amzn2023.0.2              amazonlinux          467 k
+ dejavu-serif-fonts                        noarch          2.37-16.amzn2023.0.2              amazonlinux          1.0 M
+ fontconfig                                x86_64          2.13.94-2.amzn2023.0.2            amazonlinux          273 k
+ fonts-filesystem                          noarch          1:2.0.5-12.amzn2023.0.2           amazonlinux          9.5 k
+ freetype                                  x86_64          2.13.2-5.amzn2023.0.1             amazonlinux          423 k
+ giflib                                    x86_64          5.2.1-9.amzn2023.0.1              amazonlinux           49 k
+ google-noto-fonts-common                  noarch          20201206-2.amzn2023.0.2           amazonlinux           15 k
+ google-noto-sans-vf-fonts                 noarch          20201206-2.amzn2023.0.2           amazonlinux          492 k
+ graphite2                                 x86_64          1.3.14-7.amzn2023.0.2             amazonlinux           97 k
+ harfbuzz                                  x86_64          7.0.0-2.amzn2023.0.1              amazonlinux          868 k
+ java-21-amazon-corretto-headless          x86_64          1:21.0.4+7-1.amzn2023.1           amazonlinux           97 M
+ javapackages-filesystem                   noarch          6.0.0-7.amzn2023.0.6              amazonlinux           12 k
+ langpacks-core-font-en                    noarch          3.0-21.amzn2023.0.4               amazonlinux           10 k
+ libICE                                    x86_64          1.0.10-6.amzn2023.0.2             amazonlinux           71 k
+ libSM                                     x86_64          1.2.3-8.amzn2023.0.2              amazonlinux           42 k
+ libX11                                    x86_64          1.7.2-3.amzn2023.0.4              amazonlinux          657 k
+ libX11-common                             noarch          1.7.2-3.amzn2023.0.4              amazonlinux          152 k
+ libXau                                    x86_64          1.0.9-6.amzn2023.0.2              amazonlinux           31 k
+ libXext                                   x86_64          1.3.4-6.amzn2023.0.2              amazonlinux           41 k
+ libXi                                     x86_64          1.7.10-6.amzn2023.0.2             amazonlinux           40 k
+ libXinerama                               x86_64          1.1.4-8.amzn2023.0.2              amazonlinux           15 k
+ libXrandr                                 x86_64          1.5.2-6.amzn2023.0.2              amazonlinux           28 k
+ libXrender                                x86_64          0.9.10-14.amzn2023.0.2            amazonlinux           28 k
+ libXt                                     x86_64          1.2.0-4.amzn2023.0.2              amazonlinux          181 k
+ libXtst                                   x86_64          1.2.3-14.amzn2023.0.2             amazonlinux           21 k
+ libbrotli                                 x86_64          1.0.9-4.amzn2023.0.2              amazonlinux          315 k
+ libjpeg-turbo                             x86_64          2.1.4-2.amzn2023.0.5              amazonlinux          190 k
+ libpng                                    x86_64          2:1.6.37-10.amzn2023.0.6          amazonlinux          128 k
+ libxcb                                    x86_64          1.13.1-7.amzn2023.0.2             amazonlinux          230 k
+ pixman                                    x86_64          0.40.0-3.amzn2023.0.3             amazonlinux          295 k
+ xml-common                                noarch          0.6.3-56.amzn2023.0.2             amazonlinux           32 k
+
+Transaction Summary
+========================================================================================================================
+Install  35 Packages
+
+Total download size: 106 M
+Installed size: 283 M
+Downloading Packages:
+(1/35): alsa-lib-1.2.7.2-1.amzn2023.0.2.x86_64.rpm                                      7.4 MB/s | 504 kB     00:00
+(2/35): dejavu-sans-fonts-2.37-16.amzn2023.0.2.noarch.rpm                                17 MB/s | 1.3 MB     00:00
+(3/35): cairo-1.17.6-2.amzn2023.0.1.x86_64.rpm                                          7.6 MB/s | 684 kB     00:00
+(4/35): dejavu-sans-mono-fonts-2.37-16.amzn2023.0.2.noarch.rpm                           16 MB/s | 467 kB     00:00
+(5/35): dejavu-serif-fonts-2.37-16.amzn2023.0.2.noarch.rpm                               35 MB/s | 1.0 MB     00:00
+(6/35): fontconfig-2.13.94-2.amzn2023.0.2.x86_64.rpm                                    7.3 MB/s | 273 kB     00:00
+(7/35): fonts-filesystem-2.0.5-12.amzn2023.0.2.noarch.rpm                               358 kB/s | 9.5 kB     00:00
+(8/35): freetype-2.13.2-5.amzn2023.0.1.x86_64.rpm                                        18 MB/s | 423 kB     00:00
+(9/35): google-noto-fonts-common-20201206-2.amzn2023.0.2.noarch.rpm                     1.0 MB/s |  15 kB     00:00
+(10/35): giflib-5.2.1-9.amzn2023.0.1.x86_64.rpm                                         2.4 MB/s |  49 kB     00:00
+(11/35): graphite2-1.3.14-7.amzn2023.0.2.x86_64.rpm                                     4.7 MB/s |  97 kB     00:00
+(12/35): google-noto-sans-vf-fonts-20201206-2.amzn2023.0.2.noarch.rpm                    13 MB/s | 492 kB     00:00
+(13/35): harfbuzz-7.0.0-2.amzn2023.0.1.x86_64.rpm                                        27 MB/s | 868 kB     00:00
+(14/35): java-21-amazon-corretto-21.0.4+7-1.amzn2023.1.x86_64.rpm                       9.0 MB/s | 213 kB     00:00
+(15/35): javapackages-filesystem-6.0.0-7.amzn2023.0.6.noarch.rpm                        437 kB/s |  12 kB     00:00
+(16/35): langpacks-core-font-en-3.0-21.amzn2023.0.4.noarch.rpm                          475 kB/s |  10 kB     00:00
+(17/35): libICE-1.0.10-6.amzn2023.0.2.x86_64.rpm                                        3.9 MB/s |  71 kB     00:00
+(18/35): libSM-1.2.3-8.amzn2023.0.2.x86_64.rpm                                          2.2 MB/s |  42 kB     00:00
+(19/35): libX11-1.7.2-3.amzn2023.0.4.x86_64.rpm                                          27 MB/s | 657 kB     00:00
+(20/35): libX11-common-1.7.2-3.amzn2023.0.4.noarch.rpm                                  5.6 MB/s | 152 kB     00:00
+(21/35): libXau-1.0.9-6.amzn2023.0.2.x86_64.rpm                                         1.7 MB/s |  31 kB     00:00
+(22/35): libXi-1.7.10-6.amzn2023.0.2.x86_64.rpm                                         2.7 MB/s |  40 kB     00:00
+(23/35): libXext-1.3.4-6.amzn2023.0.2.x86_64.rpm                                        1.1 MB/s |  41 kB     00:00
+(24/35): libXinerama-1.1.4-8.amzn2023.0.2.x86_64.rpm                                    764 kB/s |  15 kB     00:00
+(25/35): libXrandr-1.5.2-6.amzn2023.0.2.x86_64.rpm                                      1.7 MB/s |  28 kB     00:00
+(26/35): libXrender-0.9.10-14.amzn2023.0.2.x86_64.rpm                                   1.6 MB/s |  28 kB     00:00
+(27/35): libXt-1.2.0-4.amzn2023.0.2.x86_64.rpm                                          8.4 MB/s | 181 kB     00:00
+(28/35): libXtst-1.2.3-14.amzn2023.0.2.x86_64.rpm                                       1.2 MB/s |  21 kB     00:00
+(29/35): libbrotli-1.0.9-4.amzn2023.0.2.x86_64.rpm                                       14 MB/s | 315 kB     00:00
+(30/35): libjpeg-turbo-2.1.4-2.amzn2023.0.5.x86_64.rpm                                  8.8 MB/s | 190 kB     00:00
+(31/35): libpng-1.6.37-10.amzn2023.0.6.x86_64.rpm                                       5.8 MB/s | 128 kB     00:00
+(32/35): libxcb-1.13.1-7.amzn2023.0.2.x86_64.rpm                                        9.9 MB/s | 230 kB     00:00
+(33/35): pixman-0.40.0-3.amzn2023.0.3.x86_64.rpm                                         15 MB/s | 295 kB     00:00
+(34/35): xml-common-0.6.3-56.amzn2023.0.2.noarch.rpm                                    2.0 MB/s |  32 kB     00:00
+(35/35): java-21-amazon-corretto-headless-21.0.4+7-1.amzn2023.1.x86_64.rpm               61 MB/s |  97 MB     00:01
+------------------------------------------------------------------------------------------------------------------------
+Total                                                                                    58 MB/s | 106 MB     00:01
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                1/1
+  Installing       : fonts-filesystem-1:2.0.5-12.amzn2023.0.2.noarch                                               1/35
+  Installing       : libpng-2:1.6.37-10.amzn2023.0.6.x86_64                                                        2/35
+  Installing       : dejavu-sans-mono-fonts-2.37-16.amzn2023.0.2.noarch                                            3/35
+  Installing       : dejavu-sans-fonts-2.37-16.amzn2023.0.2.noarch                                                 4/35
+  Installing       : libICE-1.0.10-6.amzn2023.0.2.x86_64                                                           5/35
+  Installing       : libSM-1.2.3-8.amzn2023.0.2.x86_64                                                             6/35
+  Installing       : dejavu-serif-fonts-2.37-16.amzn2023.0.2.noarch                                                7/35
+  Running scriptlet: xml-common-0.6.3-56.amzn2023.0.2.noarch                                                       8/35
+  Installing       : xml-common-0.6.3-56.amzn2023.0.2.noarch                                                       8/35
+  Installing       : pixman-0.40.0-3.amzn2023.0.3.x86_64                                                           9/35
+  Installing       : libjpeg-turbo-2.1.4-2.amzn2023.0.5.x86_64                                                    10/35
+  Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                        11/35
+  Installing       : libXau-1.0.9-6.amzn2023.0.2.x86_64                                                           12/35
+  Installing       : libxcb-1.13.1-7.amzn2023.0.2.x86_64                                                          13/35
+  Installing       : libX11-common-1.7.2-3.amzn2023.0.4.noarch                                                    14/35
+  Installing       : libX11-1.7.2-3.amzn2023.0.4.x86_64                                                           15/35
+  Installing       : libXext-1.3.4-6.amzn2023.0.2.x86_64                                                          16/35
+  Installing       : libXrender-0.9.10-14.amzn2023.0.2.x86_64                                                     17/35
+  Installing       : libXi-1.7.10-6.amzn2023.0.2.x86_64                                                           18/35
+  Installing       : libXtst-1.2.3-14.amzn2023.0.2.x86_64                                                         19/35
+  Installing       : libXrandr-1.5.2-6.amzn2023.0.2.x86_64                                                        20/35
+  Installing       : libXinerama-1.1.4-8.amzn2023.0.2.x86_64                                                      21/35
+  Installing       : libXt-1.2.0-4.amzn2023.0.2.x86_64                                                            22/35
+  Installing       : javapackages-filesystem-6.0.0-7.amzn2023.0.6.noarch                                          23/35
+  Installing       : graphite2-1.3.14-7.amzn2023.0.2.x86_64                                                       24/35
+  Installing       : google-noto-fonts-common-20201206-2.amzn2023.0.2.noarch                                      25/35
+  Installing       : google-noto-sans-vf-fonts-20201206-2.amzn2023.0.2.noarch                                     26/35
+  Installing       : langpacks-core-font-en-3.0-21.amzn2023.0.4.noarch                                            27/35
+  Installing       : cairo-1.17.6-2.amzn2023.0.1.x86_64                                                           28/35
+  Installing       : harfbuzz-7.0.0-2.amzn2023.0.1.x86_64                                                         29/35
+  Installing       : freetype-2.13.2-5.amzn2023.0.1.x86_64                                                        30/35
+  Installing       : fontconfig-2.13.94-2.amzn2023.0.2.x86_64                                                     31/35
+  Running scriptlet: fontconfig-2.13.94-2.amzn2023.0.2.x86_64                                                     31/35
+  Installing       : giflib-5.2.1-9.amzn2023.0.1.x86_64                                                           32/35
+  Installing       : alsa-lib-1.2.7.2-1.amzn2023.0.2.x86_64                                                       33/35
+  Installing       : java-21-amazon-corretto-headless-1:21.0.4+7-1.amzn2023.1.x86_64                              34/35
+  Running scriptlet: java-21-amazon-corretto-headless-1:21.0.4+7-1.amzn2023.1.x86_64                              34/35
+  Installing       : java-21-amazon-corretto-1:21.0.4+7-1.amzn2023.1.x86_64                                       35/35
+  Running scriptlet: fontconfig-2.13.94-2.amzn2023.0.2.x86_64                                                     35/35
+  Running scriptlet: java-21-amazon-corretto-1:21.0.4+7-1.amzn2023.1.x86_64                                       35/35
+  Verifying        : alsa-lib-1.2.7.2-1.amzn2023.0.2.x86_64                                                        1/35
+  Verifying        : cairo-1.17.6-2.amzn2023.0.1.x86_64                                                            2/35
+  Verifying        : dejavu-sans-fonts-2.37-16.amzn2023.0.2.noarch                                                 3/35
+  Verifying        : dejavu-sans-mono-fonts-2.37-16.amzn2023.0.2.noarch                                            4/35
+  Verifying        : dejavu-serif-fonts-2.37-16.amzn2023.0.2.noarch                                                5/35
+  Verifying        : fontconfig-2.13.94-2.amzn2023.0.2.x86_64                                                      6/35
+  Verifying        : fonts-filesystem-1:2.0.5-12.amzn2023.0.2.noarch                                               7/35
+  Verifying        : freetype-2.13.2-5.amzn2023.0.1.x86_64                                                         8/35
+  Verifying        : giflib-5.2.1-9.amzn2023.0.1.x86_64                                                            9/35
+  Verifying        : google-noto-fonts-common-20201206-2.amzn2023.0.2.noarch                                      10/35
+  Verifying        : google-noto-sans-vf-fonts-20201206-2.amzn2023.0.2.noarch                                     11/35
+  Verifying        : graphite2-1.3.14-7.amzn2023.0.2.x86_64                                                       12/35
+  Verifying        : harfbuzz-7.0.0-2.amzn2023.0.1.x86_64                                                         13/35
+  Verifying        : java-21-amazon-corretto-1:21.0.4+7-1.amzn2023.1.x86_64                                       14/35
+  Verifying        : java-21-amazon-corretto-headless-1:21.0.4+7-1.amzn2023.1.x86_64                              15/35
+  Verifying        : javapackages-filesystem-6.0.0-7.amzn2023.0.6.noarch                                          16/35
+  Verifying        : langpacks-core-font-en-3.0-21.amzn2023.0.4.noarch                                            17/35
+  Verifying        : libICE-1.0.10-6.amzn2023.0.2.x86_64                                                          18/35
+  Verifying        : libSM-1.2.3-8.amzn2023.0.2.x86_64                                                            19/35
+  Verifying        : libX11-1.7.2-3.amzn2023.0.4.x86_64                                                           20/35
+  Verifying        : libX11-common-1.7.2-3.amzn2023.0.4.noarch                                                    21/35
+  Verifying        : libXau-1.0.9-6.amzn2023.0.2.x86_64                                                           22/35
+  Verifying        : libXext-1.3.4-6.amzn2023.0.2.x86_64                                                          23/35
+  Verifying        : libXi-1.7.10-6.amzn2023.0.2.x86_64                                                           24/35
+  Verifying        : libXinerama-1.1.4-8.amzn2023.0.2.x86_64                                                      25/35
+  Verifying        : libXrandr-1.5.2-6.amzn2023.0.2.x86_64                                                        26/35
+  Verifying        : libXrender-0.9.10-14.amzn2023.0.2.x86_64                                                     27/35
+  Verifying        : libXt-1.2.0-4.amzn2023.0.2.x86_64                                                            28/35
+  Verifying        : libXtst-1.2.3-14.amzn2023.0.2.x86_64                                                         29/35
+  Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                        30/35
+  Verifying        : libjpeg-turbo-2.1.4-2.amzn2023.0.5.x86_64                                                    31/35
+  Verifying        : libpng-2:1.6.37-10.amzn2023.0.6.x86_64                                                       32/35
+  Verifying        : libxcb-1.13.1-7.amzn2023.0.2.x86_64                                                          33/35
+  Verifying        : pixman-0.40.0-3.amzn2023.0.3.x86_64                                                          34/35
+  Verifying        : xml-common-0.6.3-56.amzn2023.0.2.noarch                                                      35/35
+
+Installed:
+  alsa-lib-1.2.7.2-1.amzn2023.0.2.x86_64
+  cairo-1.17.6-2.amzn2023.0.1.x86_64
+  dejavu-sans-fonts-2.37-16.amzn2023.0.2.noarch
+  dejavu-sans-mono-fonts-2.37-16.amzn2023.0.2.noarch
+  dejavu-serif-fonts-2.37-16.amzn2023.0.2.noarch
+  fontconfig-2.13.94-2.amzn2023.0.2.x86_64
+  fonts-filesystem-1:2.0.5-12.amzn2023.0.2.noarch
+  freetype-2.13.2-5.amzn2023.0.1.x86_64
+  giflib-5.2.1-9.amzn2023.0.1.x86_64
+  google-noto-fonts-common-20201206-2.amzn2023.0.2.noarch
+  google-noto-sans-vf-fonts-20201206-2.amzn2023.0.2.noarch
+  graphite2-1.3.14-7.amzn2023.0.2.x86_64
+  harfbuzz-7.0.0-2.amzn2023.0.1.x86_64
+  java-21-amazon-corretto-1:21.0.4+7-1.amzn2023.1.x86_64
+  java-21-amazon-corretto-headless-1:21.0.4+7-1.amzn2023.1.x86_64
+  javapackages-filesystem-6.0.0-7.amzn2023.0.6.noarch
+  langpacks-core-font-en-3.0-21.amzn2023.0.4.noarch
+  libICE-1.0.10-6.amzn2023.0.2.x86_64
+  libSM-1.2.3-8.amzn2023.0.2.x86_64
+  libX11-1.7.2-3.amzn2023.0.4.x86_64
+  libX11-common-1.7.2-3.amzn2023.0.4.noarch
+  libXau-1.0.9-6.amzn2023.0.2.x86_64
+  libXext-1.3.4-6.amzn2023.0.2.x86_64
+  libXi-1.7.10-6.amzn2023.0.2.x86_64
+  libXinerama-1.1.4-8.amzn2023.0.2.x86_64
+  libXrandr-1.5.2-6.amzn2023.0.2.x86_64
+  libXrender-0.9.10-14.amzn2023.0.2.x86_64
+  libXt-1.2.0-4.amzn2023.0.2.x86_64
+  libXtst-1.2.3-14.amzn2023.0.2.x86_64
+  libbrotli-1.0.9-4.amzn2023.0.2.x86_64
+  libjpeg-turbo-2.1.4-2.amzn2023.0.5.x86_64
+  libpng-2:1.6.37-10.amzn2023.0.6.x86_64
+  libxcb-1.13.1-7.amzn2023.0.2.x86_64
+  pixman-0.40.0-3.amzn2023.0.3.x86_64
+  xml-common-0.6.3-56.amzn2023.0.2.noarch
+
+Complete!
+[ec2-user@ip-172-31-46-119 ~]$ mkdir Ass1
+[ec2-user@ip-172-31-46-119 ~]$ ls
+Ass1
+[ec2-user@ip-172-31-46-119 ~]$ cd Ass1/
+[ec2-user@ip-172-31-46-119 Ass1]$ vi findCity.py
+[ec2-user@ip-172-31-46-119 Ass1]$ vi findCity.py
+[ec2-user@ip-172-31-46-119 Ass1]$ [ec2-user@ip-172-31-46-119 Ass1]$
+[ec2-user@ip-172-31-46-119 Ass1]$ vi city.txt
+[ec2-user@ip-172-31-46-119 Ass1]$
+[ec2-user@ip-172-31-46-119 Ass1]$
+[ec2-user@ip-172-31-46-119 Ass1]$
+[ec2-user@ip-172-31-46-119 Ass1]$ python3 findCity.py
+Enter city name to search: pune
+pune found in list.
+[ec2-user@ip-172-31-46-119 Ass1]$ python3 findCity.py
+Enter city name to search: asdfghj
+asdfghj not found.
+[ec2-user@ip-172-31-46-119 Ass1]$
+[ec2-user@ip-172-31-46-119 Ass1]$
+[ec2-user@ip-172-31-46-119 Ass1]$

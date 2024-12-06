@@ -1,0 +1,95 @@
+sudo docker pull hello-world:latest
+sudo docker run -d -it hello-world
+sudo docker run -it hello-world
+sudo docker run --name hellocontainer hello-world:latest
+sudo docker rm c0ef 9927 5bc5
+sudo docker rmi d2c9
+
+
+sudo docker pull debian
+sudo docker run --name debianContainer -it debian
+sudo docker container stop 1192
+sudo docker stop 1192
+sudo docker container start 1192
+sudo docker container restart 1192
+sudo docker run --name debianContainer -it debian
+sudo docker ps
+sudo docker exec -it debianContainer sh
+sudo docker exec -it debianContainer bin/bash
+sudo docker container exec -it debianContainer bin/bash
+sudo docker container exec -d debianContainer touch a.txt
+sudo docker container exec -it debianContainer bin/bash
+sudo docker ps
+sudo docker restart 1192
+sudo docker exec -it debianContainer bin/bash
+
+
+Dockerfile
+FROM alpine:latest
+CMD ["echo", "hello world"]
+
+sudo docker build -t my-alpine .
+sudo docker run --name alpine-hello my-alpine
+sudo docker run --name alpine2-hello -d my-alpine
+
+--------------------------------------------------
+FROM python:3.8
+
+WORKDIR /app
+
+COPY . /app
+
+CMD ["python", "script.py"]
+
+-----------------------------------------------------------
+# Use the official Ubuntu as the base image
+FROM ubuntu:latest
+
+# Update package list and install OpenJDK 8
+RUN apt-get update && \
+    apt-get install -y openjdk-8-jdk
+
+CMD ["java", "-version"]
+----------------------------------------------------------
+
+sudo docker login -u
+sudo docker tag <image-name> <username>/<image-name>:<tag>
+sudo docker push <user-name>/<image-name>:<tag>
+----------------------------------------------------------
+folder structure
+tomcat-hello-world
+├── Dockerfile
+└── webapps
+    └── ROOT
+        └── index.jsp
+
+index.jsp
+<html>
+  <body>
+    <h1>Hello World</h1>
+  </body>
+</html>
+
+-p 8080:8080 
+<docker host: container port>
+
+
+FROM tomcat:9-jdk11
+
+
+RUN rm -rf /usr/local/tomcat/webapps/ROOT
+
+
+COPY webapps/ROOT /usr/local/tomcat/webapps/ROOT
+
+
+EXPOSE 8080
+
+
+CMD ["catalina.sh", "run"]
+
+
+sudo docker run --name java-web-application -d -p 8080:8080 javawebapp
+
+
+
